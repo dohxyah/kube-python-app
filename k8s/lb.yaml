@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: morseip
+spec:
+  externalTrafficPolicy: Local
+  selector:
+    app: morseip
+  ports:
+    - port: 80
+      targetPort: 80
+  type: LoadBalancer
